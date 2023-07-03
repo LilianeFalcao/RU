@@ -6,6 +6,15 @@
             <div class="modal-content">
             <div class="modal-body">
                 <h5 class="modal-title" id="exampleModalLabel">Agendar refeição</h5>
+                  @error('Reserva')<span class="text-red-500 text/xs">{{$messaage}} </span> @enderror
+
+                      <div>
+                            @if (session()->has('messaage'))
+                                <div class="p-3 bg-green-300 text-green-700 rounded shadow-sm ">
+                                    {{ session('messaage') }}
+                                </div>
+                            @endif
+                        </div>
                 <form wire:submit.prevent='store' method="post" action="" id="cadRef">
                 <div class="form-group">
                     <label for="almoco" class="col-form-label">Almoço:</label>

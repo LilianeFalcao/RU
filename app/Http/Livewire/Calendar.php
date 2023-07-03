@@ -35,5 +35,6 @@ class Calendar extends Component
             'janta' => $this->janta,
             'start' => $this->start,
         ]);
+        return redirect()->route('dashboard')->with('messaage', 'reserva feita');
     }
 }
