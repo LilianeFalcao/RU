@@ -7,7 +7,7 @@ use App\Models\Cardapio;
 
 class CardapioController extends Component
 {
-    public $pratoPrincipal;
+    public $prato_principal;
     public $vegetariana;
     public $vegana;
     public $guarnicao;
@@ -20,9 +20,8 @@ class CardapioController extends Component
     public $sobremesa;
     public $data;
 
-
     protected $rules = [
-        'pratoPrincipal' => 'required',
+        'prato_principal' => 'required',
         'vegetariana' => 'required',
         'vegana' => 'required',
         'guarnicao' => 'required',
@@ -44,7 +43,7 @@ class CardapioController extends Component
 
     public function index()
     {
-        $cardapios = $this->cardapio->all();
-        return view('livewire.cardapio-controller')->compact('cardapios');
+        $cardapios = Cardapio::all();
+        return view('livewire.cardapio-controller')->compact('cardapios')->layout('livewire.layout');
     }
 }

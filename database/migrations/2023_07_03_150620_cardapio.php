@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('cardapio', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('pratoPrincipal');
+            $table->string('prato_principal');
             $table->string('vegetariana');
             $table->string('vegana');
             $table->string('guarnicao');
