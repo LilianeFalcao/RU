@@ -19,25 +19,24 @@
                     </tr>
                 </thead>
                 <tbody>
-                 @foreach($cardapios as $cardapio)
-                    <tr>
-                        <td>{{$cardapio->pratoPrincipal}}</td>
-                        <td>{{$cardapio->vegetariana}}</td>
-                        <td>{{$cardapio->vegana}}</td>
-                        <td>{{$cardapio->guarnicao}}</td>
-                        <td>{{$cardapio->arroz}}</td>
-                        <td>{{$cardapio->feijao}}</td>
-                        <td>{{$cardapio->salada1}}</td>
-                        <td>{{$cardapio->salada2}}</td>
-                        <td>{{$cardapio->salada3}}</td>
-                        <td>{{$cardapio->salada4}}</td>
-                        <td>{{$cardapio->sobremesa}}</td>
-                        <td>{{$cardapio->data}}</td>
-                    </th>
+                    @foreach($cardapios as $cardapio)
+                        <tr>
+                            <td>{{$cardapios->pratoPrincipal}}</td>
+                            <td>{{$cardapios->vegetariana}}</td>
+                            <td>{{$cardapios->vegana}}</td>
+                            <td>{{$cardapios->guarnicao}}</td>
+                            <td>{{$cardapios->arroz}}</td>
+                            <td>{{$cardapios->feijao}}</td>
+                            <td>{{$cardapios->salada1}}</td>
+                            <td>{{$cardapios->salada2}}</td>
+                            <td>{{$cardapios->salada3}}</td>
+                            <td>{{$cardapios->salada4}}</td>
+                            <td>{{$cardapios->sobremesa}}</td>
+                            <td>{{$cardapios->data}}</td>
+                        </th>
                     @endforeach
                 </tbody>
             </table>
         </div>
 </div>
-
 </div>
