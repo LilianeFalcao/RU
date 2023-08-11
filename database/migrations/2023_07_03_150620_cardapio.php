@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('cardapio', function (Blueprint $table) {
+        Schema::create('cardapios', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('prato_principal');
             $table->string('vegetariana');
@@ -34,6 +34,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('cardapio');
+        Schema::dropIfExists('cardapios');
     }
 };

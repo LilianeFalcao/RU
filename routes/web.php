@@ -34,3 +34,4 @@ Route::middleware([
     })->name('cardapio');
 
 Route::post('/dashboard', [App\Http\Livewire\Calendar::class, 'store']);
+//Route::get('/cardapio', [App\Http\Livewire\CardapioController::class, 'index']);

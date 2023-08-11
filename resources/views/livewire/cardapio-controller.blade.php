@@ -1,6 +1,6 @@
 <div>
     <div>
-        <div>
+        <div class="div3">
             <table>
                 <thead>
                     <tr>
@@ -20,20 +20,12 @@
                 </thead>
                 <tbody>
                     @foreach($cardapios as $cardapio)
-                        <tr>
-                            <td>{{$cardapio->prato_principal}}</td>
-                            <td>{{$cardapio->vegetariana}}</td>
-                            <td>{{$cardapio->vegana}}</td>
-                            <td>{{$cardapio->guarnicao}}</td>
-                            <td>{{$cardapio->arroz}}</td>
-                            <td>{{$cardapio->feijao}}</td>
-                            <td>{{$cardapio->salada1}}</td>
-                            <td>{{$cardapio->salada2}}</td>
-                            <td>{{$cardapio->salada3}}</td>
-                            <td>{{$cardapio->salada4}}</td>
-                            <td>{{$cardapio->sobremesa}}</td>
-                            <td>{{$cardapio->data}}</td>
-                        </th>
+                       <tr>
+                            <th>
+                                <td>{{$cardapio->prato_principal ?? 'd '}}</td>
+
+                            </th>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
