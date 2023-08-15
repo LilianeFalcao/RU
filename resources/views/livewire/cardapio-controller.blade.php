@@ -1,6 +1,6 @@
 <div>
     <div>
-        <div class="div3">
+        <div>
             <table>
                 <thead>
                     <tr>

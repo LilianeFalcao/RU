@@ -29,9 +29,9 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
- Route::get('/cardapio', function () {
-        return view('cardapio');
-    })->name('cardapio');
+//  Route::get('/cardapio', function () {
+//         return view('cardapio');
+//     })->name('cardapio');
 
 Route::post('/dashboard', [App\Http\Livewire\Calendar::class, 'store']);
-//Route::get('/cardapio', [App\Http\Livewire\CardapioController::class, 'index']);
+Route::get('/cardapio', App\Http\Livewire\CardapioController::class)->name('cardapio');
