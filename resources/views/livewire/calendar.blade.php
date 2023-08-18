@@ -1,26 +1,24 @@
 <div wire:ignore>
-    <div class=" py-1 pl-8 pb-8">
-        <h3>Instruções de agendamento</h3>
-        <h6>
-            1- selecione o dia em que deseja fazer a refeição.
-        </h6>
-        <h6>
-            2- no boxe que aparecerá selecione as refeições que deseja, confirme o dia e aperte em "Agendar".
-        </h6>
+    <div class="pl-8">
+        <h4>
+            Instruções de Agendamento.
+        </h4>
+        <h6>-1- Selecione o dia em que deseja fazer a refeição.</h6>
+        <h6>-2- No box que aparecerá selecione as rejeições desejadas, confirme o dia e aperte em 'Agendar'.</h6>
     </div>
-        <div class="pl-8 pr-8" id="calendar"></div>
+        <div class="py-1 pl-8 pr-8" id="calendar"></div>
 
-        <div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="mod+alCreate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-body">
                 <h5 class="modal-title" id="exampleModalLabel">Agendar refeição</h5>
-                  @error('Reserva')<span class="text-red-500 text/xs">{{$messaage}} </span> @enderror
+                  @error('Reserva')<span class="text-red-500 text/xs">{{$message}} </span> @enderror
 
                       <div>
-                            @if (session()->has('messaage'))
+                            @if (session()->has('message'))
                                 <div class="p-3 bg-green-300 text-green-700 rounded shadow-sm ">
-                                    {{ session('messaage') }}
+                                    {{ session('message') }}
                                 </div>
                             @endif
                         </div>

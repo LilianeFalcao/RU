@@ -1,11 +1,11 @@
 <div>
     <div>
         <div >
-            <h4 class="py-1 pl-8 mx-0 items-center">Cardápio Cefet-MG</h4>
+            <h4 class="py-3 pl-8">Cardápio Cefet-MG</h4>
         </div>
-        <div class="p-8 py-3 pr-3">
-            <table class="pl-8 border-solid  border-4 border-black">
-                <thead>
+        <div class="p-8 ">
+          <table class="py-4 border-solid  border-4 border-black">
+                <thead class=" border-solid  border-2 border-black border-r-3">
                     <tr>
                         <th class="pr-3 4 border-r-4 border-b-4 border-black">prato_principal</th>
                         <th class="pr-3 pl-4 border-r-4 border-b-4 border-black">vegetariana</th>

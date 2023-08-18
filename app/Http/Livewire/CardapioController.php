@@ -21,7 +21,7 @@ class CardapioController extends Component
     public $data;
     public $cardapios;
 
-    protected $rules = [
+ protected $rules = [
         'prato_principal' => 'required',
         'vegetariana' => 'required',
         'vegana' => 'required',
@@ -36,14 +36,15 @@ class CardapioController extends Component
         'data' => 'required',
     ];
 
+    public readonly Cardapio $cardapio;
+
     public function __construct() {
-        $this->cardapios = new Cardapio();
+        $this->cardapio = new Cardapio();
     }
 
     public function render()
     {
         $this->cardapios = Cardapio::all();
-
         return view('livewire.cardapio-controller');
     }
 }
