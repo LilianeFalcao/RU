@@ -41,6 +41,8 @@
                     <option value="Informática">Informática</option>
                     <option value="Mecatrônica">Mecatrônica</option>
                     <option value="Engenharia Civil">Engenharia Civil</option>
+                    <option value="Sistema de informação">Sistemas de informação</option>
+
                 </select>
             </div>
 

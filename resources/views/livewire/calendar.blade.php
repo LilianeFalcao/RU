@@ -1,5 +1,14 @@
 <div wire:ignore>
-        <div id="calendar"></div>
+    <div class=" py-1 pl-8 pb-8">
+        <h3>Instruções de agendamento</h3>
+        <h6>
+            1- selecione o dia em que deseja fazer a refeição.
+        </h6>
+        <h6>
+            2- no boxe que aparecerá selecione as refeições que deseja, confirme o dia e aperte em "Agendar".
+        </h6>
+    </div>
+        <div class="pl-8 pr-8" id="calendar"></div>
 
         <div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -30,7 +39,7 @@
                 </div>
 
                 <button type="submit" id="registerBtn" class="btn btn-primary">Agendar</button>
-                <button class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button class="btn btn-secondary">Cancelar</button>
                 </form>
             </div>
             </div>
@@ -48,8 +57,10 @@
                  })
                 const calendarEl = document.getElementById('calendar');
                 const calendar = new FullCalendar.Calendar(calendarEl, {
+                weekends: false,
                 initialView: 'dayGridMonth',
                 locale: 'pt-BR',
+                timeZone: 'America/Sao_Paulo',
                 selectable: true,
                 select: function({startStr}){
                     @this.start = startStr;
@@ -59,4 +70,5 @@
                 calendar.render();
         </script>
     @endpush
+
 </div>
