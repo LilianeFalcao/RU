@@ -36,8 +36,7 @@
                 <h1>
                     Agendamentos RU-Cefet campus Varginha
                 </h1>
-                <img src="{{ URL::to('./images/cefet_fente.jpg') }}">
-                <img src="/images/cefet_frente.jpg"/>
+                <img src="/images/cefet.svg"/>
               </div>
             </div>
         </div>
