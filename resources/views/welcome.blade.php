@@ -286,6 +286,9 @@
             grid-template-columns: repeat(1, minmax(0, 1fr))
         }
 
+
+
+
         @media (min-width:640px) {
             .sm\:rounded-lg {
                 border-radius: .5rem
@@ -393,9 +396,47 @@
             background-image: url('cefet.svg');
         }
 
-        img {
-            width: 100%;
+        .fundo-home{
+            z-index: 0;
+            display: flex;
+            justify-content: center;
         }
+
+        img {
+            width: 78vw;
+            height: 78vh;
+            margin-top: 10px;
+        }
+
+        .texto-tutorial{
+            background-color: orange;
+            border: solid 2px black;
+            width: 50vw;
+            height: 20vh;
+            text-align: center;
+            position: absolute;
+            top: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .fundo-informatorio{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .texto-tuto{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            max-height: 80%;
+        }
+
     </style>
 </head>
 
@@ -404,28 +445,36 @@
         @if (Route::has('login'))
         <div class="fixed top-0 right-0 px-6 py-4 sm:block">
             @auth
-            <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Dashboard</a>
+            <a href="{{ url('/dashboard') }}" class="text-sm text-white dark:text-white underline">Dashboard</a>
             @else
-            <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Entrar</a>
+            <a href="{{ route('login') }}" class="text-sm text-white dark:text-white underline">Entrar</a>
 
             @if (Route::has('register'))
-            <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 dark:text-gray-500 underline">Registrar</a>
+            <a href="{{ route('register') }}" class="ml-4 text-sm text-white dark:text-white underline">Registrar</a>
             @endif
             @endauth
         </div>
         @endif
         <div class="dark:text-white">
             <h1 class="text-center">ATENÇÃO</h1>
-             <div>
+             <div class="fundo-informatorio">
                 <h1>
                     Agendamentos RU-Cefet campus Varginha
                 </h1>
+
               </div>
         </div>
-        <div class="bg">
-            <img src="images/cefet.svg" alt="banner" />
-        </div>
+        <section class="fundo-home">
+            <img src="images/fotofundo.jpg" alt="banner" />
+            <aside class="texto-tutorial">
+                <p class="texto-tuto">Olá seja bem vindo!
+                    <br>
+                    Clique no canto superior direito para
+                    <br>
+                    fazer login ou para realizar seu cadastro
+                </p>
+            </aside>
+        </section>
     </div>
 </body>
-
 </html>
