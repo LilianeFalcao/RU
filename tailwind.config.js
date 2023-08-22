@@ -14,6 +14,9 @@ module.exports = {
             fontFamily: {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
+            backgroundImage: {
+                "hero-pattern": "url('public/images/cefet.svg')",
+            },
         },
     },
 

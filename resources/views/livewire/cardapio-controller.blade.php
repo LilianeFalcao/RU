@@ -3,50 +3,50 @@
         <div >
             <h4 class="py-3 pl-8 text-center ">Cardápio Cefet-MG</h4>
         </div>
-        <div class="pl-2 pr-2 h-8 sm:h-12 md:h-16 lg:h-20 xl:h-24 w-32">
-          <table class="bg-blue-300 py-4 border-solid  border-4 border-black">
-                <thead class="bg-orange-500 " >
+        <div class="table-responsive w-auto pr-8 pl-8">
+          <table class="table">
+                <thead class="bg-info" >
                     <tr>
-                        <th class="pl-2 pr-2 items-center 4 border-r-2 border-b-2 border-black">prato_principal</th>
-                        <th class="pr-3 pl-2 border-r-2 border-b-2 border-black">vegetariana</th>
-                        <th class="pl-4 border-r-2 border-b-2 border-black">vegana</th>
-                        <th class="pl-3 items-center border-r-2 border-b-2 border-black">guarnição</th>
-                        <th class="pl-4 border-r-2 border-b-2 border-black">arroz</th>
-                        <th class="pl-4 border-r-2 border-b-2 border-black">feijao</th>
-                        <th class="pl-4 border-r-2 border-b-2 border-black">salada1</th>
-                        <th class="pl-3 items-center border-r-2 border-b-2 border-black">salada2</th>
-                        <th class="pl-4 border-r-2 border-b-2 border-black">salada3</th>
-                        <th class="pl-4 border-r-2 border-b-2 border-black">salada4</th>
-                        <th class="pl-2 items-center justify-center border-r-2 border-b-2 border-black">sobremesa</th>
-                        <th class="pl-4 border-r-2 border-b-2 border-black">data</th>
+                        <th class="col">Prato Principal</th>
+                        <th class="col">Vegetariana</th>
+                        <th class="col">Vegana</th>
+                        <th class="col">Guarnição</th>
+                        <th class="col">Arroz</th>
+                        <th class="col">Feijao</th>
+                        <th class="col">Salada1</th>
+                        <th class="col">Salada2</th>
+                        <th class="col">Salada3</th>
+                        <th class="col">Salada4</th>
+                        <th class="col">Sobremesa</th>
+                        <th class="col">Data</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="">
                     @foreach($cardapios as $cardapio)
-                       <tr class="pl-7 pr-8">
-                                <td class="pr-3 pl-4 border-b-2 border-r-2 border-black">
+                       <tr>
+                                <td class="col">
                                     {{$cardapio->prato_principal}}</td>
-                                <td class="pr-3 pl-8 border-b-2 border-r-2 border-black">
+                                <td class="col">
                                     {{$cardapio->vegetariana}}</td>
-                                <td class="pr-3 pl-4 items-center border-b-2 border-r-2 border-black">
+                                <td class="col">
                                     {{$cardapio->vegana}}</td>
-                                <td class="pr-3 pl-4 border-r-2 border-b-2 border-black">
+                                <td class="col">
                                     {{$cardapio->guarnicao}}</td>
-                                <td class="pr-3 pl-4 border-r-2 border-b-2 border-black">
+                                <td class="col">
                                     {{$cardapio->arroz}}</td>
-                                <td class="pr-3 pl-4 border-r-2 border-b-2 border-black">
+                                <td class="col">
                                     {{$cardapio->feijao}}</td>
-                                <td class="pr-3 pl-4 border-r-2 border-b-2 border-black">
+                                <td class="col">
                                     {{$cardapio->salada1}}</td>
-                                <td class="pr-3 pl-4 border-r-2 border-b-2 border-black">
+                                <td class="col">
                                     {{$cardapio->salada2}}</td>
-                                <td class="pr-3 pl-4 border-r-2 border-b-2 border-black">
+                                <td class="col">
                                     {{$cardapio->salada3}}</td>
-                                <td class="pr-3 pl-4 border-r-2 border-b-2 border-black">
+                                <td class="col">
                                     {{$cardapio->salada4}}</td>
-                                <td class="pr-3 pl-4 border-r-2 border-b-2 border-black">
+                                <td class="col">
                                     {{$cardapio->sobremesa}}</td>
-                                <td class="pr-3 pl-4 border-r-2 border-b-2 border-black">
+                                <td class="col">
                                     {{$cardapio->data}}</td>
                         </tr>
                     @endforeach
