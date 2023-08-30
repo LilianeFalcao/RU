@@ -4,8 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\{
     Calendar, CardapioController
 };
-use Livewire\Livewire;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
