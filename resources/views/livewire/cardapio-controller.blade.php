@@ -24,30 +24,30 @@
                 <tbody class="">
                     @foreach($cardapios as $cardapio)
                        <tr>
-                                <td class="col">
-                                    {{$cardapio->prato_principal}}</td>
-                                <td class="col">
-                                    {{$cardapio->vegetariana}}</td>
-                                <td class="col">
-                                    {{$cardapio->vegana}}</td>
-                                <td class="col">
-                                    {{$cardapio->guarnicao}}</td>
-                                <td class="col">
-                                    {{$cardapio->arroz}}</td>
-                                <td class="col">
-                                    {{$cardapio->feijao}}</td>
-                                <td class="col">
-                                    {{$cardapio->salada1}}</td>
-                                <td class="col">
-                                    {{$cardapio->salada2}}</td>
-                                <td class="col">
-                                    {{$cardapio->salada3}}</td>
-                                <td class="col">
-                                    {{$cardapio->salada4}}</td>
-                                <td class="col">
-                                    {{$cardapio->sobremesa}}</td>
-                                <td class="col">
-                                    {{$cardapio->data}}</td>
+                            <td class="col">
+                                {{$cardapio->prato_principal}}</td>
+                            <td class="col">
+                                {{$cardapio->vegetariana}}</td>
+                            <td class="col">
+                                {{$cardapio->vegana}}</td>
+                            <td class="col">
+                                {{$cardapio->guarnicao}}</td>
+                            <td class="col">
+                                {{$cardapio->arroz}}</td>
+                            <td class="col">
+                                {{$cardapio->feijao}}</td>
+                            <td class="col">
+                                {{$cardapio->salada1}}</td>
+                            <td class="col">
+                                {{$cardapio->salada2}}</td>
+                            <td class="col">
+                                {{$cardapio->salada3}}</td>
+                            <td class="col">
+                                {{$cardapio->salada4}}</td>
+                            <td class="col">
+                                {{$cardapio->sobremesa}}</td>
+                            <td class="col">
+                                {{$cardapio->data}}</td>
                         </tr>
                     @endforeach
                 </tbody>

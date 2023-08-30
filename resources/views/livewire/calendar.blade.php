@@ -8,7 +8,7 @@
     </div>
         <div class="py-1 pl-8 pr-8" id="calendar"></div>
 
-        <div class="modal fade" id="mod+alCreate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalCreate" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
             <div class="modal-body">
@@ -22,6 +22,7 @@
                                 </div>
                             @endif
                         </div>
+                  
                 <form wire:submit.prevent='store' method="post" action="" id="cadRef">
                 <div class="form-group">
                     <label for="almoco" class="col-form-label">Almoço:</label>
