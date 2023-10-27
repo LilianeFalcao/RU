@@ -4,16 +4,9 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\{
     Calendar, CardapioController
 };
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\Admin\{
+    HomeController, AdminLoginController
+};
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,9 +21,23 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-//  Route::get('/cardapio', function () {
-//         return view('cardapio');
-//     })->name('cardapio');
 
-Route::post('/dashboard', [App\Http\Livewire\Calendar::class, 'store']);
+Route::get('admin/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
+Route::post('admin/dashboard', [App\Http\Livewire\CardapioController::class, 'store']);
+
 Route::get('/cardapio', App\Http\Livewire\CardapioController::class)->name('cardapio');
+
+//admin
+
+Route::group(['prefix' => 'admin'], function(){
+
+    Route::group(['middleware' => 'admin.guest'], function (){
+
+        Route::get('/login', [AdminLoginController::class, 'index'])->name('admin.login');
+        Route::post('/authenticate', [AdminLoginController::class, 'authenticate'])->name('admin.authenticate');
+    });
+
+    Route::group(['middleware' => 'admin.auth'], function (){
+
+    });
+});
