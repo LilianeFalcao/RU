@@ -21,10 +21,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
-
-Route::get('admin/dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
-Route::post('admin/dashboard', [App\Http\Livewire\CardapioController::class, 'store']);
-
 Route::get('/cardapio', App\Http\Livewire\CardapioController::class)->name('cardapio');
 
 //admin
@@ -38,6 +34,7 @@ Route::group(['prefix' => 'admin'], function(){
     });
 
     Route::group(['middleware' => 'admin.auth'], function (){
-
+        Route::get('dashboard', [HomeController::class, 'index'])->name('admin.dashboard');
+        Route::post('dashboard/store', [App\Http\Livewire\CardapioController::class, 'store']);
     });
 });

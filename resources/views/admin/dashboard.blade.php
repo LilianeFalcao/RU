@@ -6,11 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fomulario</title>
 </head>
-<body>
+<body class="container-fluid">
     <h2 class="mt-4 text-center ">Formulário de Cardápio</h2>
 
-<form wire:submit.prevent="store" action="/admin/dashboard" method="POST" class="container mb-5">
+<form wire:submit.prevent="store" action="dashboard/store" method="POST" class="container mb-5">
     @csrf
+
+    @if (session()->has('message'))
+        <div class="alert alert-success" id="alert">
+            {{ session('message') }}
+        </div>
+    @endif
     <div class="form-group">
         <label for="prato_principal">Prato Principal: </label>
         <input id="prato_principal" name='prato_principal' type="text" wire:model="prato_principal" class="form-control" placeholder="Insira o prato principal">
@@ -68,7 +74,24 @@
     </div>
     <button type="submit" class="btn btn-primary mb-2">adicionar</button>
 
+
+    <!-- Timer do alert  -->
+    <div>
+        <script>
+            setTimeout(function()
+                {
+                    $("#alert").remove();
+                },2000
+            );
+        </script>
+    </div>
 </form>
+    <!-- cardapio  -->
+    <div>
+        @livewire('cardapio-controller')
+    </div>
 </body>
 </html>
+
+
 

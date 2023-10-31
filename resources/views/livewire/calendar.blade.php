@@ -24,8 +24,6 @@
                     <h5 class="modal-title" id="exampleModalLabel">Agendar refeição</h5>
                     @error('Reserva')<span class="text-red-500 text/xs">{{$message}} </span> @enderror
 
-
-
                     <form wire:submit.prevent='store' method="post" action="" id="cadRef">
                         <div class="form-group">
                             <label for="almoco" class="col-form-label">Almoço:</label>

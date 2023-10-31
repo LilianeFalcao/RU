@@ -66,6 +66,6 @@ class CardapioController extends Component
 
         $cardapio->save();
 
-        return redirect('/cardapio')->with('message', 'cardapio cadastrado' );
+        return redirect('/admin/dashboard')->with('message', 'cardapio cadastrado' );
     }
 }
