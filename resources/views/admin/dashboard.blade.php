@@ -73,6 +73,7 @@
         <input type="date" name='data' wire:model="data" class="form-control" id="data" placeholder="Informe a data">
     </div>
     <button type="submit" class="btn btn-primary mb-2">adicionar</button>
+    <button type="submit" class="btn btn-primary mb-2">ver cardapio</button>
 
 
     <!-- Timer do alert  -->

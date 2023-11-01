@@ -12,16 +12,20 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
+    Route::get('/cardapio', function () {
+        return view('cardapio');
+    })->name('cardapio');
+
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');
 });
-Route::get('/cardapio', App\Http\Livewire\CardapioController::class)->name('cardapio');
 
 //admin
 

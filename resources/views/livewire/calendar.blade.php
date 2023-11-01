@@ -4,7 +4,7 @@
             Instruções de Agendamento
         </h4>
         <h6>1- Selecione o dia em que deseja fazer a refeição.</h6>
-        <h6>2- No box que aparecerá selecione as rejeições desejadas, confirme o dia e aperte em 'Agendar'.</h6>
+        <h6>2- No box que aparecerá selecione as refeições desejadas, confirme o dia e aperte em 'Agendar'.</h6>
     </div>
 
         <div>
