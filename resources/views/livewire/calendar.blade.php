@@ -7,7 +7,6 @@
         <h6>2- No box que aparecerá selecione as refeições desejadas, confirme o dia e aperte em 'Agendar'.</h6>
     </div>
         @include('admin.message')
-
         <div>
             @if (session()->has('message'))
             <div class="p-3 bg-green-300 text-green-700 rounded shadow-sm" id="alert">
@@ -39,7 +38,8 @@
                         </div>
 
                         <button type="submit" id="registerBtn" class="btn btn-primary">Agendar</button>
-                        <button type="submit" id="cancelBtn" class="btn btn-secundary">cancelar</button>
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"> Cancelar </button>
+
                     </form>
                 </div>
             </div>

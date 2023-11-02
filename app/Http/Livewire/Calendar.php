@@ -8,7 +8,7 @@ use App\Models\Reserva;
 class Calendar extends Component
 {
     public $almoco = '';
-    public $janta = '' ;
+    public $janta = '';
     public $start = '';
 
      public static function rules()
@@ -27,24 +27,22 @@ class Calendar extends Component
         foreach($reservas as $reserva){
             $events[] = [
                 'title' => 'Agendado',
-                'start' => $reserva->start,
                 'almoco' => $reserva->almoco,
                 'janta' => $reserva->janta,
+                'start' => $reserva->start,
             ];
         }
         return view('livewire.calendar', ['events' => $events]);
     }
-
     public function store(){
-
         $this->validate();
 
         Reserva::create([
-            'user_id' => auth()->user()->id,
-            'almoco' => $this->almoco,
-            'janta' => $this->janta,
-            'start' => $this->start,
+                'user_id' => auth()->user()->id,
+                'almoco' => $this->almoco,
+                'janta' => $this->janta,
+                'start' => $this->start,
         ]);
-        return redirect()->route('dashboard')->with('message', 'reserva feita' );
+        return redirect()->route('dashboard')->with('message', 'Reservado' );
     }
 }

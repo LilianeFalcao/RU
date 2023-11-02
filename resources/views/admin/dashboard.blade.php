@@ -40,7 +40,7 @@
 
             <div class="form-group-sm">
                 <label for="feijao">Feijão: </label>
-                <input type="text"name='feijao'  wire:model="feijao" class="form-control" id="feijao" placeholder="Insira a opção de feijão">
+                <input type="text" name='feijao'  wire:model="feijao" class="form-control" id="feijao" placeholder="Insira a opção de feijão">
             </div>
 
             <div class="form-group-sm">
