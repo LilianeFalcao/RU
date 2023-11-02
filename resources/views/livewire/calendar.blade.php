@@ -6,13 +6,13 @@
         <h6>1- Selecione o dia em que deseja fazer a refeição.</h6>
         <h6>2- No box que aparecerá selecione as refeições desejadas, confirme o dia e aperte em 'Agendar'.</h6>
     </div>
+        @include('admin.message')
 
         <div>
             @if (session()->has('message'))
             <div class="p-3 bg-green-300 text-green-700 rounded shadow-sm" id="alert">
                 {{ session('message') }}
             </div>
-
             @endif
         </div>
     <div class="py-1 pl-8 pr-8" id="calendar"></div>
@@ -39,7 +39,7 @@
                         </div>
 
                         <button type="submit" id="registerBtn" class="btn btn-primary">Agendar</button>
-                        <button class="btn btn-secondary">Cancelar</button>
+                        <button type="submit" id="cancelBtn" class="btn btn-secundary">cancelar</button>
                     </form>
                 </div>
             </div>
@@ -56,7 +56,9 @@
                 @this.start = '';
             })
             const calendarEl = document.getElementById('calendar');
+            var events = @json($events);
             const calendar = new FullCalendar.Calendar(calendarEl, {
+                events: events,
                 weekends: false,
                 initialView: 'dayGridMonth',
                 locale: 'pt-BR',

@@ -22,7 +22,17 @@ class Calendar extends Component
 
     public function render()
     {
-        return view('livewire.calendar');
+        $events = array();
+        $reservas = Reserva::all();
+        foreach($reservas as $reserva){
+            $events[] = [
+                'title' => 'Agendado',
+                'start' => $reserva->start,
+                'almoco' => $reserva->almoco,
+                'janta' => $reserva->janta,
+            ];
+        }
+        return view('livewire.calendar', ['events' => $events]);
     }
 
     public function store(){
@@ -35,6 +45,6 @@ class Calendar extends Component
             'janta' => $this->janta,
             'start' => $this->start,
         ]);
-        return redirect()->route('dashboard')->with('message', 'reserva feita para o dia' );
+        return redirect()->route('dashboard')->with('message', 'reserva feita' );
     }
 }
