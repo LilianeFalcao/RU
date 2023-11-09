@@ -23,7 +23,7 @@ class Calendar extends Component
     public function render()
     {
         $events = array();
-        $reservas = Reserva::all();
+        $reservas = Reserva::where('user_id',auth()->user()->id)->get();
         foreach($reservas as $reserva){
             $events[] = [
                 'title' => 'Agendado',

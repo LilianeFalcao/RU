@@ -75,6 +75,8 @@
             <button type="submit" class="btn btn-primary mb-2">adicionar</button>
 
             <button type="submit" class="btn btn-primary mb-2">ver cardapio</button>
+           <!--visualizar cardapio temporario -->
+                @livewire('cardapio-controller')
 
             <!-- Timer do alert  -->
             <div>
